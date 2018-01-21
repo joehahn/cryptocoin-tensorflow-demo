@@ -96,7 +96,7 @@ for additional details
 
 ### Next steps:
 
-1 figure out how to execute the above much more swiftly using my maptop's GPU
+1 figure out how to execute the above much more swiftly using laptop's GPU
 
 2 migrate this demo to an AWS instance having bigger faster GPU
 
