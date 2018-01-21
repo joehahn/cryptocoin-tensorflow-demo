@@ -75,7 +75,7 @@ Also this model's predictions have MAE = 5%,
 which is considerably larger than that obtained on the training data, which tells
 us that this LSTM model is suffering from some degree of overfitting, so additional detective
 work will be needed to fix that.
-![](figs/predictions.png)
+![](figs/prediction.png)
 Lastly, the red curve in the above plot shows predictions made by a simple linear regression (LR)
 that was also trained on this dataset; that curve shows that the LR model is only somewhat useful across
 the first month of testing data, with the LR model then veering away from reality at later times.
