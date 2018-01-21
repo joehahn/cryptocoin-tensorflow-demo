@@ -41,23 +41,30 @@ and execute the ethereum-LSTM-model.ipynb notebook
 
 The notebook downloads two years of bitcoin and ethereum prices and volumes, plotted here:
 
-
+try 1
 ![ScreenShot](./test.png)
 
+try2
 <p>
     <img src="test.png" width="220" height="240" />
 </p>
 
+try3
 ![]({% static 'test.png' %})
 
+try4
 ![](https://github.com/joehahn/cryptocoin-tensorflow-demo/blob/master/test.png)
 
+try5
 ![](https://raw.githubusercontent.com/letmaik/vscode-git-tree-compare/master/screenshots/main.png) 
 
+try6
 ![](https://github.com/joehahn/cryptocoin-tensorflow-demo/blob/master/figs/price.png)
 
+try7
 ![picture](figs/price.png)
 
+try8
 ![picture](/figs/price.png)
 
 
