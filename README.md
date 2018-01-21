@@ -24,7 +24,6 @@ needed to execute this demo on my Mac laptop:
     wget https://repo.continuum.io/miniconda/Miniconda2-latest-MacOSX-x86_64.sh
     chmod +x ./Miniconda2-latest-MacOSX-x86_64.sh
     ./Miniconda2-latest-MacOSX-x86_64.sh -b -p ~/miniconda2
-    #~/miniconda2/bin/conda install -y matplotlib
     ~/miniconda2/bin/conda install -y seaborn
     ~/miniconda2/bin/conda install -y scikit-learn
     ~/miniconda2/bin/conda install -y jupyter
