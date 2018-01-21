@@ -61,7 +61,6 @@ this network has 4 hidden layers that are all 16 neurons wide,
 and training executes in 8 minutes using a Mac laptop's CPU. (Migrating this effort to use
 the laptop's GPU to speed up the training time would be the next logical step.)
 ![](figs/lstm.png)
-
 The MAE (mean absolute error) loss function is used to train the LSTM model,
 and the model's MAE versus training epoch is shown below
 ![](figs/loss.png)
