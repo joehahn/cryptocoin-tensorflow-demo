@@ -63,8 +63,9 @@ the laptop's GPU to speed up the training time would be the next logical step.)
 
 The MAE (mean absolution error) versus training epoch is shown below
 ![](figs/loss.png)
-the LSTM model is trained to predict ethereum's fractional next-day price, this figure
-is purportedly telling us that the
+the LSTM model is trained to predict ethereum's fractional next-day price, so this figure
+is purportedly telling us that the the model's accuracy is at the 2% level (but see below).
+
 
 ### Next steps:
 
