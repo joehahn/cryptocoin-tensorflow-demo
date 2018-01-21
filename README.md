@@ -50,6 +50,8 @@ The notebook downloads two years of bitcoin and ethereum prices and volumes, plo
 
 ![]({% static 'test.png' %})
 
+![](https://github.com/joehahn/cryptocoin-tensorflow-demo/blob/master/test.png)
+ 
 
 ### Next steps:
 
