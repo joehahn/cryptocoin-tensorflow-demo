@@ -66,7 +66,7 @@ and the model's MAE versus training epoch is shown below
 ![](figs/loss.png)
 This model is trained to predict ethereum's _fractional_ next-day price, so this figure
 is purportedly telling us that the trained LSTM model can predict
-ethereum's one-day price change with a 2% accuracy...but see below.
+ethereum's one-day price change with a 2% accuracy, but see below.
 
 The trained LSTM model is then applied to
 the test dataset, to predict ethereum's next-day fractional price
