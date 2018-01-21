@@ -81,7 +81,7 @@ try7
 try8
 
 
-![picture](/figs/price.png)
+![](price.png)
 
 
 try9
