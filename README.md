@@ -68,9 +68,10 @@ This model is trained to predict ethereum's _fractional_ next-day price, so this
 is purportedly telling us that the trained LSTM model can predict
 ethereum's one-day price change with 2% accuracy...but see below.
 
-The trained LSTM model on the test dataset to predict ethereum's next-day fractional price
-change, for all dates after 2017-11-15; green shows the actual next-day price variation
-while the blue curve shows the predicted price change:
+The trained LSTM model is then applied to
+the test dataset, to predict ethereum's next-day fractional price
+change for all dates after 2017-11-15. Green curve (below)
+shows the actual next-day price variation while the blue curve shows the predicted price change:
 Although the model predictions are
 in the right neighborhood, those predictions do not recover ethereum's
 actual next-day price variation well enough to warrant using this simple model
