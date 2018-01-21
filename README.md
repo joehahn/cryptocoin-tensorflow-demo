@@ -18,7 +18,7 @@ top of a simple dataset, and that at least is achieved.
 
 ### Setup:
 
-1 I use the following to download conda to install Anaconda python plus the additional libraries
+1 i use the following to download conda to install Anaconda python plus the additional libraries
 needed to execute this demo on my Mac laptop:
 
     wget https://repo.continuum.io/miniconda/Miniconda2-latest-MacOSX-x86_64.sh
