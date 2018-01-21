@@ -37,8 +37,8 @@ needed to execute this demo on my Mac laptop:
 
 and then execute the predict_crypto_price.ipynb notebook
 
-3 Note that the LSTM model used here was cribbed from David Sheehan's blog,
-https://dashee87.github.io/deep%20learning/python/predicting-cryptocurrency-prices-with-deep-learning 
+3 Note that the LSTM model used here was cribbed from David Sheehan's blog post
+https://dashee87.github.io/deep%20learning/python/predicting-cryptocurrency-prices-with-deep-learning,
 which is worth a read.
 
 ### Execute
