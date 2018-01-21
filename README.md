@@ -84,7 +84,7 @@ Lastly, the red curve in the above plot shows predictions made by a simple linea
 that was also trained on this data; that curve shows that the LR model is only somewhat useful across
 the first month of testing data, with the LR model then veering away from reality at later times.
 The LR model's MAE was also twice that of the LSTM model, so LSTM was two times more accurate than the
-simplest of all machine-learning algorithms, and its predictions were much better behaved
+simplest of all machine-learning algorithms, and the LSTM predictions were much better behaved
 further into the future.
 
 ### Conclusions
