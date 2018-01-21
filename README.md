@@ -37,6 +37,10 @@ needed to execute this demo on my Mac laptop:
 
 and then execute the predict_crypto_price.ipynb notebook
 
+3 Note that the LSTM model used here was cribbed from David Sheehan's blog,
+https://dashee87.github.io/deep%20learning/python/predicting-cryptocurrency-prices-with-deep-learning 
+which is worth a read.
+
 ### Execute
 
 The notebook downloads and plots two years of bitcoin and ethereum prices:
@@ -77,7 +81,7 @@ us that this LSTM model is suffering from some degree of overfitting, so additio
 work is still needed to fix that.
 ![](figs/prediction.png)
 Lastly, the red curve in the above plot shows predictions made by a simple linear regression (LR)
-that was also trained on this dataset; that curve shows that the LR model is only somewhat useful across
+that was also trained on this data; that curve shows that the LR model is only somewhat useful across
 the first month of testing data, with the LR model then veering away from reality at later times.
 The LR model's MAE was also twice that of the LSTM model, so LSTM was two times more accurate than the
 simplest of all machine-learning algorithm, and its predictions were also much better behaved
