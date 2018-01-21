@@ -5,7 +5,7 @@ jmh.datasciences@gmail.com,<br />
 21 January 2018<br />
 git branch=master
 
-### Abstract:
+### Summary:
 
 This demo trains a simple LSTM neural network to predict daily changes in the
 Ethereum cryptocurrency. Source code is a Jupyter notebook that uses Keras on Tensorflow
