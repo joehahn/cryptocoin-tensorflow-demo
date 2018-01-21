@@ -1,7 +1,7 @@
 # cryptocoin-tensorflow-demo
 
-by Joe Hahn,<br />
-jmh.datasciences@gmail.com,<br />
+by Joe Hahn<br />
+jmh.datasciences@gmail.com<br />
 21 January 2018<br />
 git branch=master
 
