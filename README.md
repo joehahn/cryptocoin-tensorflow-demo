@@ -41,15 +41,18 @@ and execute the ethereum-LSTM-model.ipynb notebook
 
 The notebook downloads and plots two years of bitcoin and ethereum prices
 
-![](price.png)
+![](figs/ethereum.png)
+
+
+![](figs/price.png)
 
 and volumes versus time
 
-![](volume.png)
+![](figs/volume.png)
 
 then 
 
-![](training.png)
+![](figs/training.png)
 
 
 ### Next steps:
