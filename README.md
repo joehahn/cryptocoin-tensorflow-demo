@@ -40,11 +40,10 @@ and then execute the predict_crypto_price.ipynb notebook
 ### Execute
 
 The notebook downloads and plots two years of bitcoin and ethereum prices:
-
 ![](figs/ethereum.png)
-
-and plots currency prices and volumes versus time:
+and plots currency prices
 ![](figs/price.png)
+and volumes versus time:
 ![](figs/volume.png)
 
 The LSTM model will be trained on data accrued prior to 2017-11-15 (blue curve, below)
