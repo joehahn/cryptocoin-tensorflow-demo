@@ -89,7 +89,11 @@ further into the future.
 
 ### Conclusions
 
- 
+The above illustrates how to fit a simple LSTM neural network, using Keras on top of Tensorflow
+plus a modest amount of cryptocurrency data, executed as a Jupyter notebook; see 
+https://github.com/joehahn/cryptocoin-tensorflow-demo/blob/master/predict_crypto_price.ipynb
+for additional details
+
 ### Next steps:
 
 1 figure out how to execute the above much more swiftly using my maptop's GPU
