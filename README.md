@@ -43,8 +43,7 @@ The notebook downloads two years of bitcoin and ethereum prices and volumes, plo
 
 price
 
-![](https://github.com/joehahn/cryptocoin-tensorflow-demo/blob/master/test.png)
-
+![ScreenShot](/test.png)
 
 volume
 
