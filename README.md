@@ -90,6 +90,13 @@ try9
 ![](https://github.com/joehahn/spark-one-off/blob/master/figs/decision_surface.png)
 
 
+
+try10
+
+
+![](https://github.com/joehahn/cryptocoin-tensorflow-demo/blob/master/figs/price.png)
+
+
 ### Next steps:
 
 1 figure out how to execute the above much more swiftly using my maptop's GPU
