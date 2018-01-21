@@ -26,6 +26,7 @@ needed to execute this demo on my Mac laptop:
     ./Miniconda2-latest-MacOSX-x86_64.sh -b -p ~/miniconda2
     #~/miniconda2/bin/conda install -y matplotlib
     ~/miniconda2/bin/conda install -y seaborn
+    ~/miniconda2/bin/conda install -y scikit-learn
     ~/miniconda2/bin/conda install -y jupyter
     ~/miniconda2/bin/conda install -y lxml
     ~/miniconda2/bin/conda install -y BeautifulSoup4
@@ -47,17 +48,25 @@ and plots currency prices and volumes versus time:
 ![](figs/price.png)
 ![](figs/volume.png)
 
-the LSTM model will be trained on data accrued prior to 2017-11-15 (blue curve, below)
+The LSTM model will be trained on data accrued prior to 2017-11-15 (blue curve, below)
 and that model will be used to predict the next-day change in ethereum's price
 during subsequent days (green curve)
 
 ![](figs/training.png)
 
+In order to help the model predict ethereum's next-day price change, the model is training data
+on 4 days of lagged price and volume data. The LSTM (Long Short Term Memory) neural network
+is built using Keras on top of Tensorflow, it has 4 hidden layers that are 16 neurons wide,
+and training executes in 8 minutes using Mac laptop's CPU. Migrating this effort to use
+the laptop's GPU to speed up the training time would be the next logical step, stay tuned.
 
+ 
 ### Next steps:
 
 1 figure out how to execute the above much more swiftly using my maptop's GPU
 
 2 migrate this demo to an AWS instance having bigger faster GPU
+
+3 resolve the overfitting issue
 
 
