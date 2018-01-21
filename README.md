@@ -54,7 +54,7 @@ accrued prior to 2017-11-15 (blue curve, below)
 and that model will then be used to predict the next-day change in ethereum's price
 during subsequent days (green curve)
 ![](figs/training.png)
-In order to help the model predict ethereum's next-day price change, the model is training data
+To help the model predict ethereum's next-day price change, the model is trained
 on 4 days of lagged price and volume data. The notebook then builds a simple
 LSTM  neural network using Keras on top of Tensorflow;
 this network has 4 hidden layers that are all 16 neurons wide,
