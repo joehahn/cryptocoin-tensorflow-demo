@@ -36,7 +36,7 @@ needed to execute this demo on my Mac laptop:
 
     ~/miniconda2/bin/jupyter notebook
 
-and execute the ethereum-LSTM-model.ipynb notebook
+and then execute the predict_crypto_price.ipynb notebook
 
 ### Execute
 
