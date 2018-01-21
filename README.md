@@ -65,7 +65,8 @@ The MAE (mean absolute error) loss function is used to train the LSTM model
 and that model's MAE versus training epoch is shown below
 ![](figs/loss.png)
 This model is trained to predict ethereum's _fractional_ next-day price, so this figure
-is purportedly telling us that the the model's accuracy is at the 2% level (but see below).
+is purportedly telling us that the trained LSTM model can predict
+ethereum's one-day price change with 2% accuracy...but see below.
 
 
 ### Next steps:
