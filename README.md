@@ -54,7 +54,7 @@ The notebook downloads two years of bitcoin and ethereum prices and volumes, plo
 
 ![](https://raw.githubusercontent.com/letmaik/vscode-git-tree-compare/master/screenshots/main.png) 
 
-![](figs/price.png)  
+![](https://github.com/joehahn/cryptocoin-tensorflow-demo/blob/master/figs/price.png)
 
 ### Next steps:
 
