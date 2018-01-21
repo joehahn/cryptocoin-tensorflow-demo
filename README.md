@@ -83,7 +83,7 @@ Lastly, the red curve in the above plot shows predictions made by a simple linea
 trained on this dataset; that curve shows that the LR model is only somewhat useful across
 the first month of testing data, with the LR model then veering away from reality at later times.
 
-### Findings
+### Conclusions
 
  
 ### Next steps:
