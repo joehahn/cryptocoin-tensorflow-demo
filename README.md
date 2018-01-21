@@ -58,6 +58,9 @@ The notebook downloads two years of bitcoin and ethereum prices and volumes, plo
 
 ![picture](figs/price.png)
 
+![picture](/figs/price.png)
+
+
 ### Next steps:
 
 1 figure out how to execute the above much more swiftly using my maptop's GPU
