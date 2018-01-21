@@ -48,6 +48,7 @@ The notebook downloads two years of bitcoin and ethereum prices and volumes, plo
     <img src="test.png" width="220" height="240" />
 </p>
 
+![]({% static 'test.png' %})
 
 
 ### Next steps:
