@@ -102,4 +102,7 @@ for additional details
 
 3 resolve the overfitting issue
 
+4 broaden the dataset used here to include other market data (easy) plus 
+market & cryptocurrency news (challenging)
+
 
