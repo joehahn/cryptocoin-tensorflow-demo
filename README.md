@@ -39,18 +39,17 @@ and execute the ethereum-LSTM-model.ipynb notebook
 
 ### Execute
 
-The notebook downloads and plots two years of bitcoin and ethereum prices
+The notebook downloads and plots two years of bitcoin and ethereum prices:
 
 ![](figs/ethereum.png)
 
-
+and plots currency prices and volumes versus time:
 ![](figs/price.png)
-
-and volumes versus time
-
 ![](figs/volume.png)
 
-then 
+the LSTM model will be trained on data accrued prior to 2017-11-15 (blue curve, below)
+and that model will be used to predict the next-day change in ethereum's price
+during subsequent days (green curve)
 
 ![](figs/training.png)
 
