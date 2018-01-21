@@ -44,6 +44,9 @@ The notebook downloads two years of bitcoin and ethereum prices and volumes, plo
 
 ![ScreenShot](./test.png)
 
+<p>
+    <img src="test.png" width="220" height="240" />
+</p>
 
 
 
