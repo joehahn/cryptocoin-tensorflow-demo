@@ -43,7 +43,7 @@ which is worth a read.
 
 ### Execute
 
-The notebook downloads and plots two years of bitcoin and ethereum prices:
+The notebook downloads two years of bitcoin and ethereum prices:
 ![](figs/ethereum.png)
 and plots currency prices
 ![](figs/price.png)
