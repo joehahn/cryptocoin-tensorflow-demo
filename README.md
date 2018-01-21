@@ -61,9 +61,10 @@ this network has 4 hidden layers that are all 16 neurons wide,
 and training executes in 8 minutes using a Mac laptop's CPU. (Migrating this effort to use
 the laptop's GPU to speed up the training time would be the next logical step.)
 
-The MAE (mean absolution error) versus training epoch is shown below
+The MAE (mean absolute error) loss function is used to train the LSTM model
+and that model's MAE versus training epoch is shown below
 ![](figs/loss.png)
-the LSTM model is trained to predict ethereum's fractional next-day price, so this figure
+This model is trained to predict ethereum's _fractional_ next-day price, so this figure
 is purportedly telling us that the the model's accuracy is at the 2% level (but see below).
 
 
