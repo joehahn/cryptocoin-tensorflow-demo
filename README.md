@@ -70,11 +70,20 @@ ethereum's one-day price change with 2% accuracy...but see below.
 
 The trained LSTM model on the test dataset to predict ethereum's next-day fractional price
 change, for all dates after 2017-11-15; green shows the actual next-day price variation
-while the blue curve shows the predicted price change.
+while the blue curve shows the predicted price change:
 ![](figs/prediction.png)
 Although the model predictions are
 in the right neighborhood, those predictions do not recover ethereum's
-actual next-day price variation well enough to co
+actual next-day price variation well enough to warrant using this simple model
+to guide investment decisions. Also this model's predictions have MAE = 5%,
+which is considerably larger than that obtained on the training data, and this tells
+us that this LSTM model is suffering from some degree of overfitting. Additional detective
+work will be needed to fix that.
+
+Lastly, the red curve in the above plot shows predictions made by a simple linear regression (LR)
+trained on this dataset; that curve shows that the LR model is only somewhat useful across
+the first month of testing data, with the LR model then veering away from reality at later times.
+
  
 ![](figs/training.png)
 
