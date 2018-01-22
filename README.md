@@ -93,11 +93,9 @@ for additional details
 
 ### Next steps:
 
-1 adapt this demo so that it executes much more swiftly using laptop's GPU
+1 adapt this demo so that training executes more swiftly using laptop's GPU
 
 2 migrate this demo to an AWS instance having bigger faster GPU
-
-3 resolve the overfitting issue
 
 4 broaden the dataset used here to include other market data (easy) plus 
 market & cryptocurrency news (challenging)
