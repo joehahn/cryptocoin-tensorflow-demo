@@ -18,7 +18,30 @@ a simple dataset, and that at least is achieved.
 
 ### Setup:
 
-1 i use the following to download conda to install Anaconda python plus the additional libraries
+1 clone this repo and select desired branch:
+
+    git clone https://github.com/joehahn/cryptocoin-tensorflow-demo.git
+    cd cryptocoin-tensorflow-demo.git
+    git checkout gpu-on-bitfusion
+
+2 Launch a g2.2xl EC2 instance in AWS via recipe detailed in  
+https://hackernoon.com/keras-with-gpu-on-amazon-ec2-a-step-by-step-instruction-4f90364e49ac
+using these settings:
+
+    EC2 > launch instance > Community AMIs
+    search for 'Bitfusion Ubuntu TensorFlow' > g2.2xlarge ($0.76/hr)
+    set tag Name=tf-demo
+    security group settings:
+        set SSH and TCP entries to have Source=My IP (this enables ssh and jupyter)
+        add custom TCP rule, port=6006, Source=My IP (to enable tensorboard)
+    create & download keypair named tf-demo.pem
+    Launch
+
+3 store tf-demo.pem in in subfolder named 'private' and set its permissions:
+
+    chmod 400 private/tf-demo.pem
+
+4 i use the following to download conda to install Anaconda python plus the additional libraries
 needed to execute this demo on my Mac laptop:
 
     wget https://repo.continuum.io/miniconda/Miniconda2-latest-MacOSX-x86_64.sh
