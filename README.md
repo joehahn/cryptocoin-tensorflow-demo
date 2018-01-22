@@ -97,7 +97,7 @@ for additional details
 
 2 migrate this demo to an AWS instance having bigger faster GPU
 
-4 broaden the dataset used here to include other market data (easy) plus 
+3 broaden the dataset used here to include other market data (easy) plus 
 market & cryptocurrency news (challenging)
 
 
