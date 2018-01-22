@@ -74,10 +74,8 @@ shows the actual next-day price variation versus date,
 while the blue curve shows the predicted price change. Although the model predictions are
 in the desired neighborhood, those predictions do not recover ethereum's
 actual next-day price variation with enough accuracy to want to invest.
-Also this model's predictions have MAE = 5%,
-which is considerably larger than that obtained on the training data, which tells
-us that this LSTM model is suffering from some degree of overfitting, so additional detective
-work is still needed to fix that.
+Also this model's predictions on the test dataset also have MAE = 5%, so there appears to be
+no sign of under/over fitting.
 ![](figs/prediction.png)
 Lastly, the red curve in the above plot shows predictions made by a simple linear regression (LR)
 that was also trained on this data; that curve shows that the LR model is only somewhat useful across
