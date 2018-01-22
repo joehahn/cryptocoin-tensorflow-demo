@@ -93,11 +93,9 @@ for additional details
 
 ### Next steps:
 
-1 adapt this demo so that training executes more swiftly using laptop's GPU
+1 migrate this demo to an AWS instance having an NVIDIA GPU
 
-2 migrate this demo to an AWS instance having bigger faster GPU
-
-3 broaden the dataset used here to include other market data (easy) plus 
+2 broaden the dataset used here to include other market data (easy) plus 
 market & cryptocurrency news (challenging)
 
 
