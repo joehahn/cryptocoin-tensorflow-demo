@@ -41,6 +41,33 @@ using these settings:
 
     chmod 400 private/tf-demo.pem
 
+4 obtain the instance's public IP address from the EC2 console, and then ssh into the instance:
+
+    ssh -i private/tf-demo.pem ubuntu@ec2-54-191-135-137.us-west-2.compute.amazonaws.com
+
+5 update locate database:
+
+    sudo updatedb
+
+6 get instance ID:
+
+    ec2metadata --instance-id
+
+7 start jupyter:
+
+    jupyter notebook
+
+8 browse jupyter at public_IP:8888 and log in with password=instance-id
+
+    ec2-54-191-135-137.us-west-2.compute.amazonaws.com:8888
+
+9 use Jupyter UI to upload predict_crypto_price.ipynb from desktop
+
+10 install additional python libraries
+
+    sudo pip install seaborn
+    sudo pip install lxml
+
 4 i use the following to download conda to install Anaconda python plus the additional libraries
 needed to execute this demo on my Mac laptop:
 
