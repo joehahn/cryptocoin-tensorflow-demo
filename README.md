@@ -100,7 +100,7 @@ To help the model predict ethereum's next-day price change, the model is trained
 on 4 days of lagged price and volume data. The notebook then builds a simple
 LSTM  neural network using Keras on top of Tensorflow;
 this network has 3 hidden layers that are all 12 neurons wide,
-and training requires about 1 minute using a Mac laptop's CPU. 
+and training requires about 1 minute using the GPU on g2.2xlarge instance in AWS. 
 ![](figs/lstm.png)
 The MAE (mean absolute error) loss function is used to train the LSTM model,
 and the model's MAE versus training epoch is shown below
