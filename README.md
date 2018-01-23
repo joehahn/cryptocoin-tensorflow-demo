@@ -2,8 +2,8 @@
 
 by Joe Hahn<br />
 jmh.datasciences@gmail.com<br />
-21 January 2018<br />
-git branch=gpu-on-bitfusion
+22 January 2018<br />
+git branch=gpu-on-bitfusion 
 
 ### Summary:
 
@@ -16,11 +16,11 @@ which is at best partly true and certainly not sufficient for building an adequa
 for Ethereum. But the principal goal here is to build and test an LSTM model using
 a simple dataset, and that at least is achieved.
 
+A secondary goal was to execute this demo on a GPU in the AWS cloud.
+
 ### Setup:
 
-2 Launch a g2.2xl EC2 instance in AWS via recipe detailed in  
-https://hackernoon.com/keras-with-gpu-on-amazon-ec2-a-step-by-step-instruction-4f90364e49ac
-using these settings:
+1 launch a g2.2xl EC2 instance in the AWS cloud using these settings:
 
     EC2 > launch instance > Community AMIs
     search for 'Bitfusion Ubuntu TensorFlow' > g2.2xlarge ($0.76/hr)
@@ -31,51 +31,55 @@ using these settings:
     create & download keypair named tf-demo.pem
     Launch
 
-3 store tf-demo.pem in in subfolder named 'private' and set its permissions:
+2 store private ssh key tf-demo.pem in subfolder 'private' with these permissions:
 
     chmod 400 private/tf-demo.pem
 
-4 obtain the instance's public IP address from the EC2 console, and then ssh into the instance:
+3 obtain the instance's public IP address from the EC2 console, and then ssh into the instance:
 
     ssh -i private/tf-demo.pem ubuntu@ec2-54-245-199-248.us-west-2.compute.amazonaws.com
 
 
-5 clone this repo and select desired branch:
+4 clone this repo and select desired branch:
 
     git clone https://github.com/joehahn/cryptocoin-tensorflow-demo.git
     cd cryptocoin-tensorflow-demo
     git checkout gpu-on-bitfusion
 
-6 install additional python libraries
+5 install additional python libraries
 
     sudo pip install seaborn
     sudo pip install lxml
-    sudo pip install --upgrade pandas            #install --upgrade to resolve version conflict
+    sudo pip install --upgrade pandas          #use install --upgrade to resolve version conflicts
     sudo pip install --upgrade BeautifulSoup4
 
-7 update locate database:
+6 update locate database:
 
     sudo updatedb
 
-8 get instance ID:
+7 get instance ID:
 
     ec2metadata --instance-id
 
-10 start jupyter:
+8 start jupyter:
 
     jupyter notebook
 
-11 browse jupyter at public_IP:8888 and log in with password=instance-id
+9 browse jupyter at public_IP:8888 and log in with password=instance-id
 
     ec2-54-245-199-248.us-west-2.compute.amazonaws.com:8888
 
-12 use Jupyter UI to upload predict_crypto_price.ipynb from desktop, and run it
+10 use Jupyter UI to upload predict_crypto_price.ipynb from this repo on your desktop,
+and then Run it
 
-13 monitor GPU usage via:
+11 monitor GPU usage via:
 
     watch -n0.1 nvidia-smi
 
-14 Note that the LSTM model used here was cribbed from David Sheehan's blog post
+Note that GPU utilization is only about 15%, and that the notebook's 1 minute execution 
+time was comparable to that obtained on a CPU, sigh...
+
+12 The LSTM model used here was cribbed from David Sheehan's blog post
 https://dashee87.github.io/deep%20learning/python/predicting-cryptocurrency-prices-with-deep-learning,
 which is worth a read.
 
@@ -95,8 +99,8 @@ during subsequent days (green curve)
 To help the model predict ethereum's next-day price change, the model is trained
 on 4 days of lagged price and volume data. The notebook then builds a simple
 LSTM  neural network using Keras on top of Tensorflow;
-this network has 2 hidden layers that are all 12 neurons wide,
-and training requires about 1 minute using a Mac laptop's CPU. 
+this network has 3 hidden layers that are all 12 neurons wide,
+and training requires about 1 minute using the GPU on a g2.2xlarge instance in AWS. 
 ![](figs/lstm.png)
 The MAE (mean absolute error) loss function is used to train the LSTM model,
 and the model's MAE versus training epoch is shown below
@@ -126,12 +130,16 @@ further into the future.
 
 The above illustrates how to fit a simple LSTM neural network, using Keras on top of Tensorflow
 plus a modest amount of cryptocurrency data, executing inside a Jupyter notebook, see 
-https://github.com/joehahn/cryptocoin-tensorflow-demo/blob/master/predict_crypto_price.ipynb
+https://github.com/joehahn/cryptocoin-tensorflow-demo/blob/gpu-on-bitfusion/predict_crypto_price.ipynb
 for additional details
+
+Note also that the execution of this notebook didn't benefit from any GPU acceleration,
+run times where the same for execution on GPU and CPU. Presumably this is a consequence
+of the dataset's very modest size and the small size of the neural network used here.
 
 ### Next steps:
 
-2 broaden the dataset used here to include other market data (easy) plus 
+1 broaden the dataset used here to include other market data (easy) plus 
 market & cryptocurrency news (challenging)
 
 ###Notes
