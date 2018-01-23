@@ -16,7 +16,7 @@ which is at best partly true and certainly not sufficient for building an adequa
 for Ethereum. But the principal goal here is to build and test an LSTM model using
 a simple dataset, and that at least is achieved.
 
-A secondary goal was to execute this demo using a GPU in the AWS cloud.
+A secondary goal was to execute this demo on a GPU in the AWS cloud.
 
 ### Setup:
 
