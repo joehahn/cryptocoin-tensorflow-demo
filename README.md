@@ -142,9 +142,9 @@ of the dataset's very modest size and the small size of the neural network used 
 1 broaden the dataset used here to include other market data (easy) plus 
 market & cryptocurrency news (challenging)
 
-###Notes
+### Notes
 
-1 execute python2 script at commandline:
+1 to execute python2 script at commandline:
 
     python2 ./predict_crypto_price.py
 
