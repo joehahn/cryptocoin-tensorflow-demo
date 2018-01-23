@@ -35,51 +35,51 @@ A secondary goal was to execute this demo on a GPU in the AWS cloud.
 
     chmod 400 private/tf-demo.pem
 
-4 obtain the instance's public IP address from the EC2 console, and then ssh into the instance:
+3 obtain the instance's public IP address from the EC2 console, and then ssh into the instance:
 
     ssh -i private/tf-demo.pem ubuntu@ec2-54-245-199-248.us-west-2.compute.amazonaws.com
 
 
-5 clone this repo and select desired branch:
+4 clone this repo and select desired branch:
 
     git clone https://github.com/joehahn/cryptocoin-tensorflow-demo.git
     cd cryptocoin-tensorflow-demo
     git checkout gpu-on-bitfusion
 
-6 install additional python libraries
+5 install additional python libraries
 
     sudo pip install seaborn
     sudo pip install lxml
     sudo pip install --upgrade pandas          #use install --upgrade to resolve version conflicts
     sudo pip install --upgrade BeautifulSoup4
 
-7 update locate database:
+6 update locate database:
 
     sudo updatedb
 
-8 get instance ID:
+7 get instance ID:
 
     ec2metadata --instance-id
 
-10 start jupyter:
+8 start jupyter:
 
     jupyter notebook
 
-11 browse jupyter at public_IP:8888 and log in with password=instance-id
+9 browse jupyter at public_IP:8888 and log in with password=instance-id
 
     ec2-54-245-199-248.us-west-2.compute.amazonaws.com:8888
 
-12 use Jupyter UI to upload predict_crypto_price.ipynb from this repo on your desktop,
+10 use Jupyter UI to upload predict_crypto_price.ipynb from this repo on your desktop,
 and then Run it
 
-13 monitor GPU usage via:
+11 monitor GPU usage via:
 
     watch -n0.1 nvidia-smi
 
 Note that GPU utilization is only about 15%, and that the notebook's 1 minute execution 
 time was comparable to that obtained on a CPU, sigh...
 
-14 The LSTM model used here was cribbed from David Sheehan's blog post
+12 The LSTM model used here was cribbed from David Sheehan's blog post
 https://dashee87.github.io/deep%20learning/python/predicting-cryptocurrency-prices-with-deep-learning,
 which is worth a read.
 
