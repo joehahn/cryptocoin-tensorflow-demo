@@ -31,8 +31,7 @@ A secondary goal was to execute this demo on a GPU in the AWS cloud.
     create & download keypair named tf-demo.pem
     Launch
 
-3 with private ssh key tf-demo.pem being stored in subfolder named 'private' with 
-these permissions:
+2 store private ssh key tf-demo.pem in subfolder 'private' with these permissions:
 
     chmod 400 private/tf-demo.pem
 
