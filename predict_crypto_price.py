@@ -11,6 +11,8 @@
 
 #import matplotlib pandas etc
 import matplotlib
+#uncomment the following when on headless EC2 instance
+matplotlib.use('agg') 
 import seaborn as sns
 import matplotlib.pyplot as plt
 import datetime
@@ -98,7 +100,6 @@ ax.set_yscale('log')
 ax.set_ylim(0.001, 100)
 ax.legend()
 plt.savefig('figs/price.png')
-#plt.show()
 
 #plot volumes vs time
 fig, ax = plt.subplots(figsize=(15, 6))
@@ -114,7 +115,6 @@ ax.set_yscale('log')
 ax.set_ylim(1.0e-3, 100)
 ax.legend()
 plt.savefig('figs/volume.png')
-#plt.show()
 
 #model will be trained on data collected early 2017, and tested against subsequent data
 train_start_date = '2017-02-28'
@@ -138,7 +138,6 @@ ax.set_ylabel('closing price    (K$)')
 ax.set_title('ethereum')
 ax.legend()
 plt.savefig('figs/training.png')
-#plt.show()
 
 #select index, feature and target columns from records in coins having desired Dates
 index_col = 'Date'
@@ -229,7 +228,7 @@ N_epochs = 21
 np.random.seed(124)
 model = lstm_model(N_neurons, input_shape, output_size, activ_func='tanh', dropout=0.35)
 loss_history = model.fit(x_train, y_train, epochs=N_epochs, batch_size=1, validation_data=(x_valid, y_valid),
-    verbose=0, shuffle=True)
+    verbose=1, shuffle=True)
 print ' training  loss = ', loss_history.history['loss'][-1]
 print 'validation loss = ', loss_history.history['val_loss'][-1]
 
@@ -240,10 +239,8 @@ ax.plot(loss_history.epoch, loss_history.history['val_loss'], label='validation 
 ax.set_title('loss function vs training epoch')
 ax.set_ylabel('Mean Absolute Error (MAE)')
 ax.set_xlabel('training epoch')
-#ax.set_ylim(0.0, 0.4)
 ax.legend()
 plt.savefig('figs/loss.png')
-#plt.show()
 
 #generate predicted y_test = ethereum's fractional next-day gain
 col = target_col + '_pred'
