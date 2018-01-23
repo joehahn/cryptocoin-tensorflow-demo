@@ -134,7 +134,7 @@ https://github.com/joehahn/cryptocoin-tensorflow-demo/blob/gpu-on-bitfusion/pred
 for additional details
 
 Note also that the execution of this notebook didn't benefit from any GPU acceleration,
-run times where the same for execution on GPU and CPU. Presumably this is a consequence
+run times were similar for execution on GPU and CPU. Presumably this is a consequence
 of the dataset's very modest size and the small size of the neural network used here.
 
 ### Next steps:
