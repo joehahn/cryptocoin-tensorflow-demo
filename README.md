@@ -3,7 +3,7 @@
 by Joe Hahn<br />
 jmh.datasciences@gmail.com<br />
 22 January 2018<br />
-git branch=gpu-on-bitfusion
+git branch=gpu-on-bitfusion 
 
 ### Summary:
 
