@@ -18,12 +18,6 @@ a simple dataset, and that at least is achieved.
 
 ### Setup:
 
-1 clone this repo and select desired branch:
-
-    git clone https://github.com/joehahn/cryptocoin-tensorflow-demo.git
-    cd cryptocoin-tensorflow-demo.git
-    git checkout gpu-on-bitfusion
-
 2 Launch a g2.2xl EC2 instance in AWS via recipe detailed in  
 https://hackernoon.com/keras-with-gpu-on-amazon-ec2-a-step-by-step-instruction-4f90364e49ac
 using these settings:
@@ -45,51 +39,43 @@ using these settings:
 
     ssh -i private/tf-demo.pem ubuntu@ec2-54-245-199-248.us-west-2.compute.amazonaws.com
 
-5 update locate database:
 
-    sudo updatedb
+5 clone this repo and select desired branch:
 
-6 get instance ID:
+    git clone https://github.com/joehahn/cryptocoin-tensorflow-demo.git
+    cd cryptocoin-tensorflow-demo
+    git checkout gpu-on-bitfusion
 
-    ec2metadata --instance-id
-
-7 start jupyter:
-
-    jupyter notebook
-
-8 browse jupyter at public_IP:8888 and log in with password=instance-id
-
-    ec2-54-245-199-248.us-west-2.compute.amazonaws.com:8888
-
-9 use Jupyter UI to upload predict_crypto_price.ipynb from desktop
-
-10 install additional python libraries
+6 install additional python libraries
 
     sudo pip install seaborn
     sudo pip install lxml
     sudo pip install --upgrade pandas            #install --upgrade to resolve version conflict
     sudo pip install --upgrade BeautifulSoup4
 
-4 i use the following to download conda to install Anaconda python plus the additional libraries
-needed to execute this demo on my Mac laptop:
+7 update locate database:
 
-    wget https://repo.continuum.io/miniconda/Miniconda2-latest-MacOSX-x86_64.sh
-    chmod +x ./Miniconda2-latest-MacOSX-x86_64.sh
-    ./Miniconda2-latest-MacOSX-x86_64.sh -b -p ~/miniconda2
-    ~/miniconda2/bin/conda install -y seaborn
-    ~/miniconda2/bin/conda install -y scikit-learn
-    ~/miniconda2/bin/conda install -y jupyter
-    ~/miniconda2/bin/conda install -y lxml
-    ~/miniconda2/bin/conda install -y BeautifulSoup4
-    ~/miniconda2/bin/conda install -y keras
+    sudo updatedb
 
-2 Start Jupyter via
+8 get instance ID:
 
-    ~/miniconda2/bin/jupyter notebook
+    ec2metadata --instance-id
 
-and then execute the predict_crypto_price.ipynb notebook
+10 start jupyter:
 
-3 Note that the LSTM model used here was cribbed from David Sheehan's blog post
+    jupyter notebook
+
+11 browse jupyter at public_IP:8888 and log in with password=instance-id
+
+    ec2-54-245-199-248.us-west-2.compute.amazonaws.com:8888
+
+12 use Jupyter UI to upload predict_crypto_price.ipynb from desktop, and run it
+
+13 monitor GPU usage via:
+
+    watch -n0.1 nvidia-smi
+
+14 Note that the LSTM model used here was cribbed from David Sheehan's blog post
 https://dashee87.github.io/deep%20learning/python/predicting-cryptocurrency-prices-with-deep-learning,
 which is worth a read.
 
@@ -145,9 +131,12 @@ for additional details
 
 ### Next steps:
 
-1 migrate this demo to an AWS instance having an NVIDIA GPU
-
 2 broaden the dataset used here to include other market data (easy) plus 
 market & cryptocurrency news (challenging)
 
+###Notes
+
+1 execute python2 script at commandline:
+
+    python2 ./predict_crypto_price.py
 
